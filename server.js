@@ -3,7 +3,6 @@ import RouterProductos from './router/productos.js'  //en nodejs siempre hay q p
 import config from './config.js'
 import CnxMongoDB from './model/DBmongo.js'
 
-
 const app = express()
 app.use(express.static('public'))
 
@@ -21,5 +20,5 @@ if (config.MODO_PERSISTENCIA == 'MONGODB') {
 }
 
 const PORT = config.PORT
-const server = app.listen(PORT, () => console.log(`Servidor apiRestful escuchando en http://localhost:${PORT}`))
+const server = app.listen(PORT, () => console.log(`Servidor apiRestful ECommerce escuchando en http://localhost:${PORT}`))
 server.on('error', error => console.log(`Error del servidor:${error.message}`))
